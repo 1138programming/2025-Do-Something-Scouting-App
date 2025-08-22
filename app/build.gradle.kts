@@ -3,8 +3,9 @@ plugins {
 }
 
 android {
-    namespace = "com.example.a2025_do_something_scouting_app"
+    namespace = "com.do_something_scouting_app"
     compileSdk = 35
+
 
     defaultConfig {
         applicationId = "com.example.a2025_do_something_scouting_app"
@@ -28,6 +29,10 @@ android {
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
+    }
+    buildFeatures {
+        viewBinding = true
+        dataBinding = true
     }
 }
 
