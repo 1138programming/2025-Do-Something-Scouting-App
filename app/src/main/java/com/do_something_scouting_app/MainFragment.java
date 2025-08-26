@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -31,6 +32,7 @@ public class MainFragment extends Fragment {
         binding.exampleButton.setOnClickListener(view1 -> {
             //this line increases the value of the "exampleButtonValue" variable by 1
             exampleButtonValue++;
+            Toast.makeText(getContext(), "idk", Toast.LENGTH_LONG).show();
             //this line sets the text of the "exampleButton" to the "exampleButtonValue"
             binding.exampleButton.setText(String.valueOf(exampleButtonValue));
         });
