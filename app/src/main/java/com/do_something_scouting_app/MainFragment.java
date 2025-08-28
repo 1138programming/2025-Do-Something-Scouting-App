@@ -1,6 +1,7 @@
 package com.do_something_scouting_app;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,6 +18,11 @@ public class MainFragment extends Fragment {
     //this is the variable that tracks what number is on the example button
     int exampleButtonValue = 0;
 
+    // empty constructor
+    public MainFragment() {
+
+    }
+
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -32,7 +38,6 @@ public class MainFragment extends Fragment {
         binding.exampleButton.setOnClickListener(view1 -> {
             //this line increases the value of the "exampleButtonValue" variable by 1
             exampleButtonValue++;
-            Toast.makeText(getContext(), "idk", Toast.LENGTH_LONG).show();
             //this line sets the text of the "exampleButton" to the "exampleButtonValue"
             binding.exampleButton.setText(String.valueOf(exampleButtonValue));
         });

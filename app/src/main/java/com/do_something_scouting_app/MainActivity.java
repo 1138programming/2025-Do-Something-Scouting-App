@@ -5,6 +5,7 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.do_something_scouting_app.R;
 
@@ -17,7 +18,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        FragmentManager fm = getSupportFragmentManager();
-        fm.beginTransaction().show(mainFragment).commit();
+        getSupportFragmentManager().beginTransaction()
+                .add(R.id.main_activity, mainFragment).show(mainFragment).commit();
+
     }
 }
